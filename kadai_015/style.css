@@ -1,0 +1,29 @@
+body {
+  font-family: "Arial", "Meiryo", sans-serif;
+  text-align: center;
+}
+ p, h2 {
+  font-size: 20px;
+}
+.blue {
+  /* 以下はキーワードで色を指定しています */
+  color: skyblue;
+}
+.pink {
+  /* 以下はキーワードで色を指定しています */
+  color: rgb(255, 192, 203);
+}
+h1 { 
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-size: 40px;
+  letter-spacing: 1.2em;
+  text-shadow: 1px 1px 2px gray;
+  border-bottom: solid 3px rgb(115, 115, 114);
+}
+#basic > p {
+  font-weight: bold;
+}
+<meta charset="UTF-8" / >
