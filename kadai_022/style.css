@@ -1,0 +1,105 @@
+h1 {
+  margin: 0px;
+}
+p {
+  margin: 0px;
+  font-size: 20px;
+}
+body {
+  margin: 0px;
+}
+a {
+  font-size: 20px;
+}
+img {
+  width: 100%;
+}
+header {
+  margin-bottom: 20px;
+  background-color: rgb(244, 79, 79);
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+main {
+  /*main要素内の余白を上下左右とも10pxにします*/
+  padding: 10px;
+}
+/*親要素*/
+#parent {
+  /*displayプロパティを使い、id名parentの要素をFlexコンテナにします*/
+  display: flex;
+  /*アイテムを中央揃えで配置する*/
+  justify-content: space-around;
+  /*文字の中央揃え。必要？？*/
+  text-align: center;
+}
+/*子要素*/
+.contents {
+  /*線（太さ3px、実線、色rgb(238, 204, 204)）で要素を囲います(ボーダー)*/
+  border: solid 3px rgb(238, 204, 204);
+  /*幅は親要素の25%にします*/
+  flex-basis: 25%;
+  /*要素内の余白は上下10px、左右15pxにします*/
+  padding: 10px 15px;
+  /*要素外の余白は上下20px、左右0にします*/
+  margin: 20px 0px;
+  /*中の要素が中央揃えになるようにします*/
+  margin-top: auto;
+}
+/*h2要素 フォントサイズを25pxにし、下線（太さ3px、点線、色rgb(236, 122, 122)）を引きます。
+h2要素の前に「●」記号を表示します。色はrgb(239, 111, 139)*/
+
+/*main parent contents*/
+h2 {
+  font-size: 25px;
+  border-bottom: 3px dashed rgb(236, 122, 122);
+}
+h2::before {
+  content: "●";
+  color: rgb(239, 111, 139);
+}
+.contents p:nth-of-type(2)::first-letter {
+  color: rgb(97, 206, 249);
+}
+/*コメント太字
+文字色はrgb(97, 206, 249) 
+marginは上下10px、左右0
+幅は70% 背景色はrgb(244, 79, 79)にします。
+中身の要素が中央揃え */
+footer {
+  margin: 10px 0px;
+  flex-basis: 70%;
+  background-color: rgb(244, 79, 79);
+  text-align: center;
+}
+/*文字色はrgb(255, 255, 255)にします。
+訪問済みリンクの文字色がrgb(193, 234, 251)に変化するようにします。
+マウスカーソルが乗ると文字色がrgb(245, 178, 168)*/
+a:link {
+  color: rgb(255, 255, 255);
+}
+a:visited {
+  color: rgb(193, 234, 251);
+}
+a:hover {
+  color: rgb(245, 178, 168);
+}
+
+/* 画面幅が768px以下のときにスタイルが適用されます */
+@media screen and (max-width: 768px) {
+  /* 段落h2のルールを記述*/
+  h2 {
+    font-size: 30px;
+  }
+  /*段落pのルールを記述*/
+  p {
+    font-size: 25px;
+  }
+  /*id「parent」のルールを記述*/
+  #parent {
+    /*displayプロパティを使い、id名parentの要素をFlexコンテナにします*/
+    display: flex;
+    /*コンテナ内のアイテムの並び順を上から下に変更する*/
+    flex-direction: column;
+  }
+}
